@@ -5,13 +5,15 @@ import 'package:task_galaxy/task-galaxy/domain/entities/egypt-news.dart';
 import 'package:task_galaxy/task-galaxy/domain/entities/the-next-web-news.dart';
 import 'package:task_galaxy/task-galaxy/domain/repositories/base-news-repository.dart';
 
-class GetEgyptNewsUseCase{
+class GetBbcNewsUseCase{
 
 final BaseNewsRepository baseNewsRepository;
 
-  GetEgyptNewsUseCase(this.baseNewsRepository);
-  Future<Either<Failure,List<EgyptNews>>>execute()async{
-    return await baseNewsRepository.getEgyptNews();
+  GetBbcNewsUseCase(this.baseNewsRepository);
+
+  Future<Either<Failure,List<BbcNews>>>execute()async{
+    return await baseNewsRepository.getBbcNews();
   }
+
 
 }
