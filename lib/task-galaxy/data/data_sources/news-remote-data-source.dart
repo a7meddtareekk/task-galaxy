@@ -3,7 +3,6 @@ import 'package:task_galaxy/task-galaxy/data/models/bbc-news-model.dart';
 import 'package:task_galaxy/task-galaxy/data/models/egpyt-news-model.dart';
 import 'package:dio/dio.dart';
 import 'package:task_galaxy/task-galaxy/data/models/the-next-web-news-model.dart';
-import 'package:task_galaxy/task-galaxy/domain/entities/bbc-news.dart';
 
 abstract class BaseNewsRemoteDataSource{
 Future<List<EgyptNewsModel>> getEgyptNews();

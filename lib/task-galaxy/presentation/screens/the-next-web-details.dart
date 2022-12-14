@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task_galaxy/task-galaxy/core/utils/app_strings.dart';
 import 'package:task_galaxy/task-galaxy/core/utils/media_query.dart';
 import 'package:task_galaxy/task-galaxy/presentation/controller/news_cubit.dart';
 
@@ -83,7 +84,7 @@ class _TheNextWebDetailsState extends State<TheNextWebDetails> {
                               ),
                               Text(
                                 '${DateTime.now().difference(DateTime.parse(theNextWeb[widget.id].date)).inHours.toString()} hours ago',
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
                               )
@@ -127,11 +128,11 @@ class _TheNextWebDetailsState extends State<TheNextWebDetails> {
                         SizedBox(height: context.height * 0.05),
                         theNextWeb[widget.id].description != "null"
                             ? Text(theNextWeb[widget.id].description)
-                            : Text("there is no desc"),
+                            : Text(AppStrings.thereIsNoDesc),
                         SizedBox(height: context.height * 0.02),
-                        const Text(
-                          'Over View : ',
-                          style: TextStyle(
+                        Text(
+                          AppStrings.overView,
+                          style: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 16),
                         ),
                         SizedBox(height: context.height * 0.02),
@@ -144,9 +145,9 @@ class _TheNextWebDetailsState extends State<TheNextWebDetails> {
                                   letterSpacing: 1.2,
                                 ),
                               )
-                            : const Text(
-                                "There is no content",
-                                style: TextStyle(
+                            :  Text(
+                                AppStrings.thereIsNoContent,
+                                style: const TextStyle(
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w400,
                                   letterSpacing: 1.2,
