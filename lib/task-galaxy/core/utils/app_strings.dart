@@ -1,3 +1,4 @@
 class AppStrings {
-  static String getYourGiftEasier = 'Get Your Gift Easier';
+  static String news = 'News';
+  static String latestNews = 'Latest News';
 }

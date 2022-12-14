@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'app-colors.dart';
+
 class AppTheme {
   static final lightTheme = ThemeData(
-     // scaffoldBackgroundColor: ConstantsColors.scaffoldColor,
+      scaffoldBackgroundColor: ConstantsColors.scaffoldColor[300],
       textTheme: const TextTheme(
 
           ///for titles
